@@ -1,12 +1,12 @@
 {
-  "name": "node-fetch",
-  "version": "3.0.0",
+  "name": "@typenode/node-fetch",
+  "version": "3.0.4-cjs",
   "description": "A light-weight module that brings Fetch API to node.js",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "sideEffects": false,
-  "type": "module",
   "files": [
     "src",
+    "dist",
     "@types/index.d.ts"
   ],
   "types": "./@types/index.d.ts",
@@ -15,6 +15,7 @@
   },
   "scripts": {
     "test": "mocha",
+    "build": "rollup src/index.js --file dist/index.js --format cjs",
     "coverage": "c8 report --reporter=text-lcov | coveralls",
     "test-types": "tsd",
     "lint": "xo"
@@ -58,12 +59,13 @@
     "formdata-node": "^3.5.4",
     "mocha": "^8.3.2",
     "p-timeout": "^5.0.0",
+    "rollup": "^2.56.3",
     "tsd": "^0.14.0",
     "xo": "^0.39.1"
   },
   "dependencies": {
     "data-uri-to-buffer": "^3.0.1",
-    "fetch-blob": "^3.1.2"
+    "@typenode/fetch-blob": "^3.1.2-cjs"
   },
   "tsd": {
     "cwd": "@types",

@@ -8,7 +8,7 @@
 import Stream, {PassThrough} from 'stream';
 import {types, deprecate} from 'util';
 
-import Blob from 'fetch-blob';
+import Blob from '@typenode/fetch-blob';
 
 import {FetchError} from './errors/fetch-error.js';
 import {FetchBaseError} from './errors/base.js';
